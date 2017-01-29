@@ -1,9 +1,7 @@
-app
-
-    .config(function($routeProvider){
-    	$routeProvider
-	        .when('/', {
-	            templateUrl: 'clientMvc/partialPages/login.html',
-	            controller: 'ctrl1'
-	        })    	
-    })
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: 'clientMvc/partialPages/login.html',
+            controller: 'ctrl1'
+        })
+});

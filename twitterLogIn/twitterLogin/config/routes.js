@@ -2,16 +2,12 @@
 
 const path = require('path'),
     index = require(path.resolve('./controllers/index')),
-    myFunction = require(path.resolve('utils/route')),
     express = require('express'),
-    user = express.Router(),
-    admin = express.Router();
+    user = express.Router();
 
 
-user.post('/upload', myFunction.saveImage(), index.upload);
-// user.post('/twitter_callback', twitterCallback);
+user.post('/auth/twitter',index.twitterLogin);
 
 module.exports = {
-    user: user,
-    admin: admin
+    user: user
 };

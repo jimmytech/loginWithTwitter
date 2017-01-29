@@ -29,11 +29,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes.user);
-app.use('/admin', routes.admin);
 require('./dataBase/db')(conf);
 
 
 
-server.listen(process.env.port || 3000, function(){
+server.listen(process.env.port || 3030, function(){
   console.log("Application server started");
 });
